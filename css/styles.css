@@ -1,3 +1,72 @@
+/* -------------- COLORS --------------- */
+/* $background-color
+$link-color
+$neutral-color */
+/* 900 - Big Shoulders Display
+800 - Big Shoulders Display
+300 - Outfit */
+.custom-button {
+  display: flex;
+  align-items: center;
+  width: 260px;
+  height: 72px;
+  text-decoration: none;
+}
+.custom-button:hover .left-section {
+  background: #D5966C;
+}
+.custom-button:hover .right-section {
+  background: #151515;
+}
+.custom-button .left-section {
+  width: 78.46%;
+  height: 100%;
+  background: #151515;
+  text-align: center;
+  display: table;
+}
+.custom-button .left-section span {
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 20px;
+  letter-spacing: 3.6px;
+  font-weight: 800;
+  color: #fff;
+}
+.custom-button .right-section {
+  width: 21.54%;
+  height: 100%;
+  background: #D5966C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-button .right-section img {
+  background-color: transparent;
+}
 
+/* HTML
+    <a href="https://www.youtube.com/" class="custom-button">
+        <div class="left-section"><span>OUR LOCATION</span></div>
+        <div class="right-section">
+            <img src="./img/icon-arrow-right.svg" alt="">
+        </div>
+    </a>
+
+    <a href="https://www.youtube.com/" class="custom-button">
+        <div class="right-section">
+            <img src="./img/icon-arrow-left.svg" alt="">
+        </div>
+        <div class="left-section"><span>back to home</span></div>
+    </a>
+
+*/
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Outfit', sans-serif;
+*/
 
 /*# sourceMappingURL=styles.css.map */

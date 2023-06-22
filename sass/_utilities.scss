@@ -1,0 +1,12 @@
+@mixin flexbox-utils($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin style-font($font, $letter, $weight, $color) {
+    font-size: $font;
+    letter-spacing: $letter;
+    font-weight: $weight;
+    color: $color;
+}

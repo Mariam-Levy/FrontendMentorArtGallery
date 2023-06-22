@@ -1,0 +1,57 @@
+.custom-button {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 72px;
+    text-decoration: none; 
+    &:hover{
+        .left-section {
+            background: $secondary-color;
+        }
+        .right-section {
+            background: $color-primary;
+        }
+    }
+    .left-section {
+        width: 78.46%;
+        height: 100%;
+        background: $color-primary;
+        text-align: center;
+        display: table;
+        span {
+            background-color: transparent;
+            display: table-cell;
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-family: 'Big Shoulders Display', cursive;
+            @include style-font(20px, 3.6px, 800, #fff);
+        }
+    }
+    .right-section {
+        width: 21.54%;
+        height: 100%;
+        background: $secondary-color;
+        @include flexbox-utils(flex, center, center);
+        img {
+            background-color: transparent;
+        }
+    }
+}
+
+
+/* HTML
+    <a href="https://www.youtube.com/" class="custom-button">
+        <div class="left-section"><span>OUR LOCATION</span></div>
+        <div class="right-section">
+            <img src="./img/icon-arrow-right.svg" alt="">
+        </div>
+    </a>
+
+    <a href="https://www.youtube.com/" class="custom-button">
+        <div class="right-section">
+            <img src="./img/icon-arrow-left.svg" alt="">
+        </div>
+        <div class="left-section"><span>back to home</span></div>
+    </a>
+
+*/
