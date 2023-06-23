@@ -4,6 +4,10 @@
     width: 260px;
     height: 72px;
     text-decoration: none; 
+    @include medium {
+        width: 204px;
+        height: 60px;
+    } 
     &:hover{
         .left-section {
             background: $secondary-color;
