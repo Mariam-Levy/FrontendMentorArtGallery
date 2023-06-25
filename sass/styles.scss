@@ -1,11 +1,5 @@
 @import "./main";
 
-/* 
-font-family: 'Big Shoulders Display', cursive;
-font-family: 'Outfit', sans-serif;
-*/
-
-
 .hero {
     width: 100%;
     height: 100vh;
@@ -150,7 +144,6 @@ font-family: 'Outfit', sans-serif;
     }
 }
 
-
 .main-container {
     width: 100%;
     height: auto;
@@ -163,15 +156,10 @@ font-family: 'Outfit', sans-serif;
     }
     .main-container__grid {
         width: 78%;
-        /* width: 1110px; */
         height: 1150px;
         margin: 0 auto;
         display: grid;
         grid:
-            /* "one two two" 400px
-            "big big four" 313px
-            "big big five" 377px
-            / 445px 160px 445px; */
             "one two two" 400px
             "big big four" 313px
             "big big five" 377px
@@ -180,10 +168,6 @@ font-family: 'Outfit', sans-serif;
         @include medium {
             margin: 0;
             grid:
-                /* "one two two" 400px
-                "big big four" 313px
-                "big big five" 396px
-                /280px 107px 280px; */
                 "one two two" 400px
                 "big big four" 313px
                 "big big five" 396px
@@ -200,9 +184,9 @@ font-family: 'Outfit', sans-serif;
                 "four" 313px
                 "five" 293px
                 /100% 100% 100%;
-            gap: 25px; /* REVISAR */
+            gap: 25px; 
             width: 90%;
-            height: auto; /* OJO */
+            height: auto; 
         }
 
     }
@@ -214,20 +198,6 @@ font-family: 'Outfit', sans-serif;
         @include medium {
             align-items: flex-start;
         }
-        /* .one__txt {
-            width: 350px;
-            height: 280px;
-            h2 {
-                text-transform: uppercase;
-                font-family: 'Big Shoulders Display', cursive;
-                @include style-letter(60px, 60px, 900, $color-primary);
-                margin-bottom: 32px;
-            }
-            p {
-                font-family: 'Outfit', sans-serif;
-                @include style-letter(22px, 32px, 300, $text-color);
-            }
-        } */
     }
     .box__txt {
         width: 350px;
@@ -308,9 +278,7 @@ font-family: 'Outfit', sans-serif;
     width: 100%;
     height: 600px;
     background-image: url(../img/desktop/image-map.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include bg-style(no-repeat, center, cover);
     @include medium {
         background-image: url(../img/tablet/image-map.png);
     }
@@ -320,7 +288,7 @@ font-family: 'Outfit', sans-serif;
     .custom-button {
         margin-left: 156px;
         @include medium {
-            margin: 39px;
+            margin-left: 39px;
         }
         @include small {
             margin: 0;
@@ -332,53 +300,85 @@ font-family: 'Outfit', sans-serif;
     width: 100%;
     height: 548px;
     background-color: $color-primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox-utils(flex, center, center);
     .direction__container {
-        width: 77%; /* w=1067px */
+        width: 77%;
         height: 316px;
         display: flex;
         justify-content: space-between;
+        @include medium {
+            width: 89%;
+        }
+        @include small {
+            flex-direction: column;
+            width: 93%;
+            height: auto; 
+        }
         .direction__title {
             width: 350px;
             height: 140px;
+            @include medium {
+                width: 223px;
+            }
+            @include small {
+                width: 100%;
+                height: auto;
+                margin-bottom: 48px;
+            }
             h1 {
-                font-size: 70px;
                 font-family: 'Big Shoulders Display', cursive;
-                font-weight: 900;
-                line-height: 70px;
                 text-transform: uppercase;
-                color: #fff;
+                @include style-letter(70px, 70px, 900, #fff);
+                @include medium {
+                    font-size: 55px;
+                    line-height: 50px;
+                }
+                @include small {
+                    font-size: 50px;
+                    line-height: 45px;
+                }
             }
         }
         .direction__street {
             width: 540px;
             height: 316px;
+            @include medium {
+                width: 398px;
+                height: 268px;
+            }
+            @include small {
+                width: 343px;
+                height: auto;
+            }
             h2 {
-                font-size: 36px;
                 font-family: 'Big Shoulders Display', cursive;
-                font-weight: 900;
-                line-height: 36px;
                 text-transform: uppercase;
                 margin-bottom: 24px;
-                color: $secondary-color;
+                @include style-letter(36px, 36px, 900, $secondary-color);
+                @include medium {
+                    font-size: 32px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
             }
             .street__usa {
-                font-size: 22px;
-                font-family: Outfit;
-                font-weight: 300;
-                line-height: 32px;
-                white-space: pre-line;
+                font-family: 'Outfit', sans-serif;
                 margin-bottom: 32px;
-                color: #fff;
+                white-space: pre-line;
+                @include style-letter(22px, 32px, 300, #fff);
+                @include medium {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                }
             }
             .street__reference {
-                font-size: 22px;
                 font-family: 'Outfit', sans-serif;
-                font-weight: 300;
-                line-height: 32px;
-                color: #fff;
+                @include style-letter(22px, 32px, 300, #fff);
+                @include medium {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
             }
         }
     }

@@ -17,3 +17,9 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin bg-style($bg-repeat, $bg-position, $bg-size) {
+    background-repeat: $bg-repeat;
+    background-position: $bg-position;
+    background-size: $bg-size;
+}
